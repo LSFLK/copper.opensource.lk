@@ -308,30 +308,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-docker-version" title="Check Docker version" class="md-nav__link">
-    Check Docker version
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#docker-installation" title="Docker Installation" class="md-nav__link">
     Docker Installation
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#kubernetes" title="Kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#check-kubernetes-version" title="Check kubernetes version" class="md-nav__link">
     Check kubernetes version
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#kubernetes-installation" title="kubernetes Installation" class="md-nav__link">
     kubernetes Installation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -477,30 +496,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-docker-version" title="Check Docker version" class="md-nav__link">
-    Check Docker version
+  <a href="#docker" title="Docker" class="md-nav__link">
+    Docker
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#docker-installation" title="Docker Installation" class="md-nav__link">
     Docker Installation
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#kubernetes" title="Kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#check-kubernetes-version" title="Check kubernetes version" class="md-nav__link">
     Check kubernetes version
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#kubernetes-installation" title="kubernetes Installation" class="md-nav__link">
     kubernetes Installation
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -583,14 +621,14 @@ $ sudo lsof -i :25
 </tbody>
 </table>
 <p>Then check external firewall also .</p>
-<h2 id="check-docker-version">Check Docker version<a class="headerlink" href="#check-docker-version" title="Permanent link">&para;</a></h2>
-<p>It is must to have docker installed in your host machine. So first check whether docker is already available.</p>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<p>It is must to have docker installed in your host machine. So first check whether docker is already available and docker version should be version 18.0 or greater.</p>
 <div class="codehilite"><pre><span></span>docker -v
 </pre></div>
 
 
 <p>If docker has not already installed then it must be installed. </p>
-<h2 id="docker-installation">Docker Installation<a class="headerlink" href="#docker-installation" title="Permanent link">&para;</a></h2>
+<h3 id="docker-installation">Docker Installation<a class="headerlink" href="#docker-installation" title="Permanent link">&para;</a></h3>
 <p><a href="https://www.linux.com/learn/intro-to-linux/2017/11/how-install-and-use-docker-linux">Docker installation</a></p>
 <p align="justify">
 Since Ubuntu Server 16.04 is sans GUI, the installation and usage of Docker will be handled entirely through the command line. Before you run the installation command, make sure to update apt and then run any necessary upgrades. Do note, if your server’s kernel upgrades, you’ll need to reboot the system. Thus, you might want to plan to do this during a time when a server reboot is acceptable.
@@ -631,10 +669,12 @@ Once you’ve taken care of that, log out and back in, and you should be good to
 <p><code>sudo systemctl stop docker</code></p>
 <p><code>sudo systemctl restart docker</code></p>
 <p>Docker is now ready to deploy containers.</p>
-<h2 id="check-kubernetes-version">Check kubernetes version<a class="headerlink" href="#check-kubernetes-version" title="Permanent link">&para;</a></h2>
+<h2 id="kubernetes">Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h2>
+<p>To deploy copper email solution we should have kubernetes version greater than  1.10 .</p>
+<h3 id="check-kubernetes-version">Check kubernetes version<a class="headerlink" href="#check-kubernetes-version" title="Permanent link">&para;</a></h3>
 <p><code>kubectl version</code></p>
 <p>Now your system is ready for copper installation.</p>
-<h2 id="kubernetes-installation">kubernetes Installation<a class="headerlink" href="#kubernetes-installation" title="Permanent link">&para;</a></h2>
+<h3 id="kubernetes-installation">kubernetes Installation<a class="headerlink" href="#kubernetes-installation" title="Permanent link">&para;</a></h3>
 <p><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">Install kubernetes</a></p>
 <p>Install kubectl on Linux</p>
 <p>Install kubectl binary with curl on Linux</p>
