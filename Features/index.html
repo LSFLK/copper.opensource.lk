@@ -282,6 +282,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copper-server-main-components" title="Copper-server main components." class="md-nav__link">
+    Copper-server main components.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mta-mail-transfer-agent-postfix" title="MTA (Mail Transfer Agent ) - POSTFIX" class="md-nav__link">
     MTA (Mail Transfer Agent ) - POSTFIX
   </a>
@@ -537,6 +557,26 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#architecture" title="Architecture" class="md-nav__link">
+    Architecture
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#copper-server-main-components" title="Copper-server main components." class="md-nav__link">
+    Copper-server main components.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mta-mail-transfer-agent-postfix" title="MTA (Mail Transfer Agent ) - POSTFIX" class="md-nav__link">
     MTA (Mail Transfer Agent ) - POSTFIX
   </a>
@@ -675,12 +715,23 @@
 <p><p align="justify">
 Copper Email Solution has been integrated many industry leading applicaitons to ensure most featurefull and secured email solution is delevered. Knowing each tool it was used will be good approach to know the solution well.
 </p></p>
+<h3 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h3>
+<p><img alt="Octocat" src="../images/copperBase_mailServerArchitecture.png" /></p>
+<h4 id="copper-server-main-components">Copper-server main components.<a class="headerlink" href="#copper-server-main-components" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="http://www.postfix.org/">Postfix</a> : A modular mail transfer agent (MTA)</li>
+<li><a href="https://www.dovecot.org/">Dovecot</a> : Secure open-source IMAP and POP3 server (MDA)</li>
+<li><a href="https://www.clamav.net/">ClamAV</a> : Antivirus software</li>
+<li><a href="https://rspamd.com/">Rspamd</a> : Spam filter</li>
+<li><a href="https://www.group-office.com/">Group-Office</a> : Web client to access mail for users</li>
+<li><a href="https://www.openldap.org/">OpenLDAP</a> : Directory service which authenticate users</li>
+</ul>
 <h2 id="mta-mail-transfer-agent-postfix">MTA (Mail Transfer Agent ) - POSTFIX<a class="headerlink" href="#mta-mail-transfer-agent-postfix" title="Permanent link">&para;</a></h2>
 <p><p align="justify">
 Postfix has been selected as the MTA in copper solution due to some of following advantages we found in postfix. To allow the server to send external emails, an MTA such as Sendmail, Postfix, or Exim is required. Mail is read either through direct access (shell login) or mailbox protocols like POP and IMAP. 
 Postfix If you compare mail servers, then Postfix should be included, too, because it is also a popular mail server. It is a better mail server because it supports most of the current innovations in a modern-day mail server including but not limited to: • Virtual domains • SMTP relay • Consultation of SMTP client on its whitelist, grey list and blacklist databases • Host and user masquerading • Delivery to mailboxes with Maildir format As you compare mail servers, you will observe that Postfix utilises two large monolithic configuration files instead of the multiple task-oriented configuration files. You will then have to learn a single set of configuration file keywords. So we selected postfix considering It's popularity in integration projects and adaptability with new featues too.
 </p></p>
-<p>Simple SMTP server.<a href="http://www.postfix.org">POSTFIX</a>.</p>
+<p>Simple SMTP server <a href="http://www.postfix.org">Postfix</a>.</p>
 <h2 id="mda-mail-delevery-agent-dovecot">MDA (Mail Delevery Agent) - DOVECOT<a class="headerlink" href="#mda-mail-delevery-agent-dovecot" title="Permanent link">&para;</a></h2>
 <p align="justify">
 Dovecot is an open source IMAP and POP3 email server for Linux/UNIX-like systems, written with security primarily in mind. Dovecot is an excellent choice for both small and large installations. It's fast, simple to set up, requires no special administration and it uses very little memory.
@@ -695,7 +746,7 @@ Dovecot is an open source IMAP and POP3 email server for Linux/UNIX-like systems
 <li>postfix and exim supprt for smtp authentication</li>
 <li>Security</li>
 </ol>
-<p>Flexible IMAP server.<a href="https://www.dovecot.org">DOVECOT</a>.</p>
+<p>Flexible IMAP server <a href="https://www.dovecot.org">Dovecot</a>.</p>
 <h2 id="spam-filter-rspamd">SPAM FILTER - RSPAMD<a class="headerlink" href="#spam-filter-rspamd" title="Permanent link">&para;</a></h2>
 <p align="justify">
 Rspamd is an advanced spam filtering system that allows evaluation of messages by a number of rules including regular expressions, statistical analysis and custom services such as URL black lists. Each message is analysed by Rspamd and given a spam score.
@@ -730,8 +781,8 @@ According to this spam score and the user’s settings, Rspamd recommends an act
 <li>asn - looks up ASN-related information
 etc <strong>*</strong>*</li>
 </ol>
-<p>Fast, free and open-source spam filtering.<a href="https://rspamd.com">RSPAMD</a></p>
-<p>Comparisson with other spam filters. <a href="https://rspamd.com/comparison.html">SPAM FILTERS</a></p>
+<p>Fast, free and open-source spam filtering <a href="https://rspamd.com">Rspamd</a></p>
+<p>Comparisson with other <a href="https://rspamd.com/comparison.html">spam filters</a></p>
 <h2 id="spf-sender-policy-framework">SPF - Sender Policy Framework<a class="headerlink" href="#spf-sender-policy-framework" title="Permanent link">&para;</a></h2>
 <p align="justify">
 Sender Policy Framework (SPF) is an email authentication method designed to detect forged sender addresses in emails (email spoofing), a technique often used in phishing and email spam.
@@ -755,16 +806,16 @@ An SPF record is a TXT record that lists the mail servers that are allowed to se
 
 </p>
 
-<p>Fast, free and open-source spam filtering.<a href="https://en.wikipedia.org/wiki/Sender_Policy_Framework">SPF</a></p>
-<p>Create TXT Record in DNS for SPF . <a href="https://mediatemple.net/community/products/dv/204404314/how-can-i-create-an-spf-record-for-my-domain">TXT Record Creation</a></p>
+<p>Fast, free and open-source spam filtering <a href="https://en.wikipedia.org/wiki/Sender_Policy_Framework">SPF</a></p>
+<p>Create TXT Record in DNS for SPF <a href="https://mediatemple.net/community/products/dv/204404314/how-can-i-create-an-spf-record-for-my-domain">TXT Record Creation</a></p>
 <h2 id="dkim-domainkeys-identified-mail">DKIM - DomainKeys Identified Mail<a class="headerlink" href="#dkim-domainkeys-identified-mail" title="Permanent link">&para;</a></h2>
 <p align="justify">
 DomainKeys Identified Mail (DKIM) lets an organization take responsibility for a message that is in transit.  The organization is a handler of the message, either as its originator or as an intermediary. Their reputation is the basis for evaluating whether to trust the message for further handling, such as delivery. Technically DKIM provides a method for validating a domain name identity that is associated with a message through cryptographic authentication. 
 DKIM allows the receiver to check that an email claimed to have come from a specific domain was indeed authorized by the owner of that domain. It achieves this by affixing a digital signature, linked to a domain name, to each outgoing email message. The recipient system can verify this by looking up the sender's public key published in the DNS. A valid signature also guarantees that some parts of the email (possibly including attachments) have not been modified since the signature was affixed. Usually, DKIM signatures are not visible to end-users, and are affixed or verified by the infrastructure rather than the message's authors and recipients. 
 </p>
 
-<p>DomainKeys Identified Mail .<a href="http://dkim.org/">DKIM</a>
-DKIM technical specification. <a href="https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail">DKIM SPECIFICATION</a></p>
+<p>DomainKeys Identified Mail - <a href="http://dkim.org/">DKIM</a></p>
+<p>DKIM technical specification - <a href="https://en.wikipedia.org/wiki/DomainKeys_Identified_Mail">DKIM SPECIFICATION</a></p>
 <h2 id="dmark-domain-based-message-authentication-reporting-conformance">DMARK - Domain-based Message Authentication, Reporting &amp; Conformance<a class="headerlink" href="#dmark-domain-based-message-authentication-reporting-conformance" title="Permanent link">&para;</a></h2>
 <p align="justify">
 DMARC, which stands for “Domain-based Message Authentication, Reporting & Conformance”, is an email authentication, policy, and reporting protocol. It builds on the widely deployed SPF and DKIM protocols, adding linkage to the author (“From:”) domain name, published policies for recipient handling of authentication failures, and reporting from receivers to senders, to improve and monitor protection of the domain from fraudulent email.
@@ -772,7 +823,7 @@ DMARC is designed to fit into an organization’s existing inbound email authent
 </p>
 
 <p><img alt="DMARK Integration" src="../images/features/dmark.png" /></p>
-<p>Domain-based Message Authentication, Reporting &amp; Conformance .<a href="https://dmarc.org">DMARK</a></p>
+<p>Domain-based Message Authentication, Reporting &amp; Conformance <a href="https://dmarc.org">DMARK</a></p>
 <h2 id="openldap-">OPENLDAP -<a class="headerlink" href="#openldap-" title="Permanent link">&para;</a></h2>
 <p align="justify">
 Openldap is used as the userbase and email server domain configuration management portal.
@@ -787,7 +838,7 @@ client software: ldapsearch, ldapadd, ldapdelete, and others
 </pre></div>
 
 
-<p>Opensource LDAP server .<a href="https://www.openldap.org/">OPENLDAP</a></p>
+<p>Opensource LDAP server <a href="https://www.openldap.org/">openLDAP</a></p>
 <h2 id="phpldapadmin">PHPLDAPADMIN<a class="headerlink" href="#phpldapadmin" title="Permanent link">&para;</a></h2>
 <p align="justify">
 PhpLdapAdmin is ued to mange the openldap server. It is simple and easy tool to mange openldap server.
@@ -799,7 +850,7 @@ phpLDAPadmin is the perfect LDAP browser for the LDAP professional and novice al
 You might also like to see About. 
 </p>
 
-<p>ldap adminsistration .<a href="http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page">PHPLDAPADMIN</a></p>
+<p>ldap adminsistration <a href="http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page">phpLDAPadmin</a></p>
 <h2 id="groupoffice">GroupOffice<a class="headerlink" href="#groupoffice" title="Permanent link">&para;</a></h2>
 <p align="justify">
 Group-Office is an enterprise CRM and groupware tool. Share projects, calendars, files and e-mail online with co-workers and clients. Easy to use and fully customizable. Its interfacea are userfriendly too. Copperoffice has used this CRM for its inbult webclient and for other groupware tools.
@@ -815,7 +866,7 @@ Group-Office is an enterprise CRM and groupware tool. Share projects, calendars,
 <li>Notes</li>
 <li>NewsLetters</li>
 </ul>
-<p>GroupOffice CRM .<a href="https://www.group-office.com">GROUPOFFICE</a></p>
+<p><a href="https://www.group-office.com">Group-Office</a> CRM</p>
 <h2 id="docker">DOCKER<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
 <p align="justify">
 Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package up an application with all of the parts it needs, such as libraries and other dependencies, and ship it all out as one package. By doing so, thanks to the container, the developer can rest assured that the application will run on any other Linux machine regardless of any customized settings that machine might have that could differ from the machine used for writing and testing the code.
@@ -823,7 +874,7 @@ In a way, Docker is a bit like a virtual machine. But unlike a virtual machine, 
 For copper email system also use docker due to it's toola are written in many languages and may wanted specific operating systems. Furthe system deployment is far more easy with docker. Copper has created their own images and hosted in docker.hub which may be pull from the hub when the system is deployed in user environments.
 </p>
 
-<p>Why docker .<a href="https://opensource.com/resources/what-docker">DOCKER</a></p>
+<p>Why <a href="https://opensource.com/resources/what-docker">Docker</a>?</p>
 <h2 id="kubernetes">Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h2>
 <p align="justify">
 Kubernetes is an open source container orchestration engine for automating deployment, scaling, and management of containerized applications. The open source project is hosted by the Cloud Native Computing Foundation (CNCF). Copper uses kubernetes for the system orchestration due to number of advantages available with the wolds leading orchestration platform.
@@ -838,7 +889,7 @@ a portable cloud platform and a lot more.
 
 <p>Kubernetes provides a container-centric management environment. It orchestrates computing, networking, and storage infrastructure on behalf of user workloads. This provides much of the simplicity of Platform as a Service (PaaS) with the flexibility of Infrastructure as a Service (IaaS), and enables portability across infrastructure providers.
 How Kubernetes is a platform</p>
-<p>Kuubernetes .<a href="https://kubernetes.io/docs/home/">KUBERNETES</a></p>
+<p><a href="https://kubernetes.io/docs/home/">Kubernetes</a></p>
                 
                   
                 
