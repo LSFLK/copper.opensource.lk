@@ -13,7 +13,7 @@
         <meta name="description" content="Copper email solution documentation">
       
       
-        <link rel="canonical" href="https://copper.opensource.lk/CConfiguration/">
+        <link rel="canonical" href="https://copper.opensource.lk/HubInstallation/">
       
       
         <meta name="author" content="Lanka Software Foundation">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Welcome to MkDocs - Copper mail</title>
+        <title>Copper Hub Installation - Copper mail</title>
       
     
     
@@ -108,7 +108,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#welcome-to-mkdocs" tabindex="1" class="md-skip">
+      <a href="#copper-hub-installation-process" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -133,7 +133,7 @@
               Copper mail
             </span>
             <span class="md-header-nav__topic">
-              Welcome to MkDocs
+              Copper Hub Installation
             </span>
           
         </div>
@@ -337,11 +337,49 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../HubInstallation/" title="Copper Hub Installation" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Copper Hub Installation
+      </label>
+    
+    <a href="./" title="Copper Hub Installation" class="md-nav__link md-nav__link--active">
       Copper Hub Installation
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#copper-hub" title="Copper-hub" class="md-nav__link">
+    Copper-hub
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -410,6 +448,22 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#copper-hub" title="Copper-hub" class="md-nav__link">
+    Copper-hub
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -420,11 +474,61 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/LSFLK/Copper/edit/master/docs/CConfiguration.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/LSFLK/Copper/edit/master/docs/HubInstallation.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs<a class="headerlink" href="#welcome-to-mkdocs" title="Permanent link">&para;</a></h1>
-<p>Groupoffice is a featurefull gropware bundle.</p>
+                <h1 id="copper-hub-installation-process">Copper hub Installation Process<a class="headerlink" href="#copper-hub-installation-process" title="Permanent link">&para;</a></h1>
+<h2 id="copper-hub">Copper-hub<a class="headerlink" href="#copper-hub" title="Permanent link">&para;</a></h2>
+<p><p align="justify">
+This repository contains source code for copper-hub which is the alerting, monitoring and update handling system for Copper.</p>
+<p>First, create grafana docker image using ./grafana-image/Dockerfile. (Read the ./grafana-image/README.md before building image)
+</p></p>
+<div class="codehilite"><pre><span></span>docker build -t graf .
+Quick start
+</pre></div>
+
+
+<p>To quickly start all the things just do this:</p>
+<div class="codehilite"><pre><span></span>kubectl apply --filename ./prometheus-master/manifests-all.yaml
+
+kubectl apply --filename ./prometheus-master/grafana.yaml
+</pre></div>
+
+
+<p align="justify">
+This will create the namespaces monitoring and grafana and will bring up all components there.
+
+Use port 3000 to access grafana.
+
+To shut down all components again you can just delete that namespace:
+</p>
+
+<div class="codehilite"><pre><span></span>kubectl delete namespace monitoring
+
+kubectl delete namespace grafana
+</pre></div>
+
+
+<p>After installing, it is must to create a datasource in grafana as "prometheus" and local URL would be "http://prometheus.monitoring.svc.cluster.local:9090/".</p>
+<p>Configure Prometheus data source for Grafana.
+Grafana UI / Data Sources / Add data source
+    Name: prometheus
+    Type: Prometheus
+    Url: http://prometheus.monitoring.svc.cluster.local:9090/
+Add
+Import the grafana dashboard from "./prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.</p>
+<p>Import grafana dashboard.
+Dashboards / Manage / import
+Name: Kubernetes Pod Resources
+Location: /prometheus-master/grafana_dashboards/dashboard_1.json
+import
+Then create a "Notification channel" to make sure that alert mails will receive for the right address.</p>
+<p>Create Notification channel.
+Alerting / Notification channels / New channel
+    Name: Email
+    Type: Email
+    Email addresses: Your email address
+import</p>
                 
                   
                 
@@ -441,6 +545,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../troubleshoot/" title="Troubleshoot" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Troubleshoot
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../issues/" title="Email security" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Email security
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
