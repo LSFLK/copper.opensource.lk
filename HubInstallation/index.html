@@ -370,6 +370,46 @@
     Copper-hub
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start" title="Quick start" class="md-nav__link">
+    Quick start
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-prometheus-data-source-for-grafana" title="Configure Prometheus data source for Grafana." class="md-nav__link">
+    Configure Prometheus data source for Grafana.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-the-grafana-dashboard-from-prometheus-mastergrafana_dashboardsdashboard_1json-to-grafana" title="Import the grafana dashboard from "./prometheus-master/grafana_dashboards/dashboard_1.json" to grafana." class="md-nav__link">
+    Import the grafana dashboard from "./prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-notification-channel-to-make-sure-that-alert-mails-will-receive-for-the-right-address" title="Create a "Notification channel" to make sure that alert mails will receive for the right address." class="md-nav__link">
+    Create a "Notification channel" to make sure that alert mails will receive for the right address.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -456,6 +496,46 @@
     Copper-hub
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-start" title="Quick start" class="md-nav__link">
+    Quick start
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configure-prometheus-data-source-for-grafana" title="Configure Prometheus data source for Grafana." class="md-nav__link">
+    Configure Prometheus data source for Grafana.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import-the-grafana-dashboard-from-prometheus-mastergrafana_dashboardsdashboard_1json-to-grafana" title="Import the grafana dashboard from "./prometheus-master/grafana_dashboards/dashboard_1.json" to grafana." class="md-nav__link">
+    Import the grafana dashboard from "./prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-notification-channel-to-make-sure-that-alert-mails-will-receive-for-the-right-address" title="Create a "Notification channel" to make sure that alert mails will receive for the right address." class="md-nav__link">
+    Create a "Notification channel" to make sure that alert mails will receive for the right address.
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
       
@@ -484,10 +564,10 @@ This repository contains source code for copper-hub which is the alerting, monit
 <p>First, create grafana docker image using ./grafana-image/Dockerfile. (Read the ./grafana-image/README.md before building image)
 </p></p>
 <div class="codehilite"><pre><span></span>docker build -t graf .
-Quick start
 </pre></div>
 
 
+<h3 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
 <p>To quickly start all the things just do this:</p>
 <div class="codehilite"><pre><span></span>kubectl apply --filename ./prometheus-master/manifests-all.yaml
 
@@ -510,25 +590,35 @@ kubectl delete namespace grafana
 
 
 <p>After installing, it is must to create a datasource in grafana as "prometheus" and local URL would be "http://prometheus.monitoring.svc.cluster.local:9090/".</p>
-<p>Configure Prometheus data source for Grafana.
-Grafana UI / Data Sources / Add data source
-    Name: prometheus
-    Type: Prometheus
-    Url: http://prometheus.monitoring.svc.cluster.local:9090/
-Add
-Import the grafana dashboard from "./prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.</p>
-<p>Import grafana dashboard.
-Dashboards / Manage / import
-Name: Kubernetes Pod Resources
-Location: /prometheus-master/grafana_dashboards/dashboard_1.json
-import
-Then create a "Notification channel" to make sure that alert mails will receive for the right address.</p>
-<p>Create Notification channel.
-Alerting / Notification channels / New channel
-    Name: Email
-    Type: Email
-    Email addresses: Your email address
-import</p>
+<h4 id="configure-prometheus-data-source-for-grafana">Configure Prometheus data source for Grafana.<a class="headerlink" href="#configure-prometheus-data-source-for-grafana" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Brows [Grafana UI / Data Sources / Add data source]<ul>
+<li>Name: prometheus</li>
+<li>Type: Prometheus</li>
+<li>Url: http://prometheus.monitoring.svc.cluster.local:9090/</li>
+<li>Add </li>
+</ul>
+</li>
+</ul>
+<h4 id="import-the-grafana-dashboard-from-prometheus-mastergrafana_dashboardsdashboard_1json-to-grafana">Import the grafana dashboard from "./prometheus-master/grafana_dashboards/dashboard_1.json" to grafana.<a class="headerlink" href="#import-the-grafana-dashboard-from-prometheus-mastergrafana_dashboardsdashboard_1json-to-grafana" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Brows [Dashboards / Manage / import}<ul>
+<li>Name: Kubernetes Pod Resources</li>
+<li>Location: /prometheus-master/grafana_dashboards/dashboard_1.json</li>
+<li>import</li>
+</ul>
+</li>
+</ul>
+<h4 id="create-a-notification-channel-to-make-sure-that-alert-mails-will-receive-for-the-right-address">Create a "Notification channel" to make sure that alert mails will receive for the right address.<a class="headerlink" href="#create-a-notification-channel-to-make-sure-that-alert-mails-will-receive-for-the-right-address" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Brows [Alerting / Notification channels / New channel]<ul>
+<li>Name: Email</li>
+<li>Type: Email</li>
+<li>Email addresses: Your email address</li>
+<li>import</li>
+</ul>
+</li>
+</ul>
                 
                   
                 
