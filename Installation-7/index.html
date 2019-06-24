@@ -13,7 +13,7 @@
         <meta name="description" content="Copper email solution documentation">
       
       
-        <link rel="canonical" href="https://copper.opensource.lk/issues/">
+        <link rel="canonical" href="https://copper.opensource.lk/Installation-7/">
       
       
         <meta name="author" content="Lanka Software Foundation">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Email security - Copper mail</title>
+        <title>Installation version 7 - Copper mail</title>
       
     
     
@@ -108,7 +108,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#common-issues-for-email-solutions" tabindex="1" class="md-skip">
+      <a href="#installation-process" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -133,7 +133,7 @@
               Copper mail
             </span>
             <span class="md-header-nav__topic">
-              Email security
+              Installation version 7
             </span>
           
         </div>
@@ -301,11 +301,112 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Installation-7/" title="Installation version 7" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Installation version 7
+      </label>
+    
+    <a href="./" title="Installation version 7" class="md-nav__link md-nav__link--active">
       Installation version 7
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-this-repository" title="Clone this Repository" class="md-nav__link">
+    Clone this Repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-following-folder-in-your-server" title="create the following folder in your server" class="md-nav__link">
+    create the following folder in your server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generate-certificate-files" title="Generate certificate files." class="md-nav__link">
+    Generate certificate files.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host-name-change-for-local-installation" title="Host name change for local installation" class="md-nav__link">
+    Host name change for local installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-the-copper-server-deployment" title="Start the copper-server deployment" class="md-nav__link">
+    Start the copper-server deployment
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-may-have-to-provide-following-informaiton-while-the-installation-process-is-going-on" title="You may have to provide following informaiton while the installation process is going on." class="md-nav__link">
+    You may have to provide following informaiton while the installation process is going on.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-kubernetes-pods" title="Check kubernetes pods." class="md-nav__link">
+    Check kubernetes pods.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-kubernetes-secrets" title="Check kubernetes secrets" class="md-nav__link">
+    Check kubernetes secrets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-kubernetes-services" title="Check kubernetes services." class="md-nav__link">
+    Check kubernetes services.
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -361,98 +462,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Email security
-      </label>
-    
-    <a href="./" title="Email security" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../issues/" title="Email security" class="md-nav__link">
       Email security
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#threats" title="Threats" class="md-nav__link">
-    Threats
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spam" title="Spam" class="md-nav__link">
-    Spam
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#spoofing" title="Spoofing" class="md-nav__link">
-    Spoofing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#phishing" title="Phishing" class="md-nav__link">
-    Phishing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#malware" title="Malware" class="md-nav__link">
-    Malware
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#solutions" title="Solutions" class="md-nav__link">
-    Solutions
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mail-filtering" title="Mail Filtering" class="md-nav__link">
-    Mail Filtering
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#transport-encryption" title="Transport encryption" class="md-nav__link">
-    Transport encryption
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -513,57 +527,71 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#threats" title="Threats" class="md-nav__link">
-    Threats
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#spam" title="Spam" class="md-nav__link">
-    Spam
+  <a href="#clone-this-repository" title="Clone this Repository" class="md-nav__link">
+    Clone this Repository
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#spoofing" title="Spoofing" class="md-nav__link">
-    Spoofing
+  <a href="#create-the-following-folder-in-your-server" title="create the following folder in your server" class="md-nav__link">
+    create the following folder in your server
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#phishing" title="Phishing" class="md-nav__link">
-    Phishing
+  <a href="#generate-certificate-files" title="Generate certificate files." class="md-nav__link">
+    Generate certificate files.
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#malware" title="Malware" class="md-nav__link">
-    Malware
+  <a href="#host-name-change-for-local-installation" title="Host name change for local installation" class="md-nav__link">
+    Host name change for local installation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#solutions" title="Solutions" class="md-nav__link">
-    Solutions
+  <a href="#start-the-copper-server-deployment" title="Start the copper-server deployment" class="md-nav__link">
+    Start the copper-server deployment
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mail-filtering" title="Mail Filtering" class="md-nav__link">
-    Mail Filtering
+  <a href="#you-may-have-to-provide-following-informaiton-while-the-installation-process-is-going-on" title="You may have to provide following informaiton while the installation process is going on." class="md-nav__link">
+    You may have to provide following informaiton while the installation process is going on.
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#transport-encryption" title="Transport encryption" class="md-nav__link">
-    Transport encryption
+  <a href="#check-kubernetes-pods" title="Check kubernetes pods." class="md-nav__link">
+    Check kubernetes pods.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-kubernetes-secrets" title="Check kubernetes secrets" class="md-nav__link">
+    Check kubernetes secrets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-kubernetes-services" title="Check kubernetes services." class="md-nav__link">
+    Check kubernetes services.
   </a>
   
 </li>
@@ -584,40 +612,149 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/LSFLK/Copper/edit/master/docs/issues.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/LSFLK/Copper/edit/master/docs/Installation-7.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="common-issues-for-email-solutions">Common issues for email solutions<a class="headerlink" href="#common-issues-for-email-solutions" title="Permanent link">&para;</a></h1>
-<h2 id="threats">Threats<a class="headerlink" href="#threats" title="Permanent link">&para;</a></h2>
+                <h1 id="installation-process">Installation Process<a class="headerlink" href="#installation-process" title="Permanent link">&para;</a></h1>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p><p align="justify">
-Eventhough the Email is one of the main communication model in the world now it has some information security issues too. Hear we just trying to high light them to grab your attention over those issue while you are operating any email solution.
-</p></p>
-<h2 id="spam">Spam<a class="headerlink" href="#spam" title="Permanent link">&para;</a></h2>
-<p><p align="justify">
-Irrelevant or unsolicited(unrequested) messages sent over the Internet, typically to a large number of users, for the purposes of advertising, phishing, spreading malware, etc.
-</p></p>
-<h2 id="spoofing">Spoofing<a class="headerlink" href="#spoofing" title="Permanent link">&para;</a></h2>
-<p><p align="justify">
-Email spoofing is one of the best known spoofs. Since core SMTP fails to offer authentication, it is simple to forge and impersonate emails. Spoofed emails may request personal information and may appear to be from a known sender. Such emails request the recipient to reply with an account number for verification. The email spoofer then uses this account number for identity theft purposes, such as accessing the victim’s bank account, changing contact details and so on.” [https://www.techopedia.com/definition/5398/spoofing]
-</p></p>
-<h2 id="phishing">Phishing<a class="headerlink" href="#phishing" title="Permanent link">&para;</a></h2>
-<p><p align="justify">
-The fraudulent practice of sending emails purporting(appear to be or do something, especially falsely.) to be from reputable companies in order to induce individuals to reveal personal information, such as passwords and credit card numbers.
-</p></p>
-<h2 id="malware">Malware<a class="headerlink" href="#malware" title="Permanent link">&para;</a></h2>
-<p><p align="justify">
-software that is specifically designed to disrupt, damage, or gain unauthorized access to a computer system.
-</p></p>
-<h2 id="solutions">Solutions<a class="headerlink" href="#solutions" title="Permanent link">&para;</a></h2>
-<h2 id="mail-filtering">Mail Filtering<a class="headerlink" href="#mail-filtering" title="Permanent link">&para;</a></h2>
-<p><p align="justify">
-Mail Filtering is widely used to avoide spams and many tools are used to achive this target. DKIM and SPF are two of such mail filtering tools. Sender Policy Framework (SPF) is an email validation protocol designed to detect and block email spoofing by providing a mechanism to allow receiving mail exchangers to verify that incoming mail from a domain comes from an IP Address authorized by that domain’s administrators.</p>
+This file describe the installation process in detailed for email version 7 and higher. Basically this deployment architecture is consists with kubernetes container orchestration facilites as shown in bellow figure. It consists with some kubernetes services like
+secrets, ingress and deployments and services etc. So all interfaces can be accessed through a loadbalancer which works as a reverse proxy and all interfaces are https enabled with ingress deployment.</p>
 </p>
 
-<h2 id="transport-encryption">Transport encryption<a class="headerlink" href="#transport-encryption" title="Permanent link">&para;</a></h2>
+<p><img alt="Deployment" src="../images/configuration/deployment.png" /></p>
+<h2 id="clone-this-repository">Clone this Repository<a class="headerlink" href="#clone-this-repository" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>$ git clone https://github.com/LSFLK/Copper.git
+</pre></div>
+
+
+<h2 id="create-the-following-folder-in-your-server">create the following folder in your server<a class="headerlink" href="#create-the-following-folder-in-your-server" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>/data/ldap/certs
+</pre></div>
+
+
+<h2 id="generate-certificate-files">Generate certificate files.<a class="headerlink" href="#generate-certificate-files" title="Permanent link">&para;</a></h2>
 <p><p align="justify">
-Transport encryption means that the email(s) will be encrypted when they are send (transferred) from one server to another. The emails are send through an encrypted tunnel when using this method. The emails are encrypted when the depart from one server and decrypted when the arrive on the other server. All emails on the server are not encrypted when they are stored on the server. Sending encrypted emails over the internet you would use for example the POP3S email transfer protocol with the Transport Layer Security (TLS)network protocol (which is the new name for the Secure Sockets Layer (SSL) protocol used for quite some years now).</p>
+This shell file will create necessary self signed certifcate for the system and then those certificates are used to create kubernetes tls secrets. 
+</p></p>
+<div class="codehilite"><pre><span></span>$ sh certification.sh 
+</pre></div>
+
+
+<p><img alt="Check copper pods" src="../images/installation/certs.png" /></p>
+<h2 id="host-name-change-for-local-installation">Host name change for local installation<a class="headerlink" href="#host-name-change-for-local-installation" title="Permanent link">&para;</a></h2>
+<p><p align="justify">
+In localhost deployment for testing perposes it is must to add line for localhost for testing perposes.</p>
 </p>
+
+<div class="codehilite"><pre><span></span>$ nano /etc/hosts
+
+add following line
+
+127.0.0.1   &lt;you domain name&gt;
+
+Ex : 127.0.0.1  copper.opensource.lk
+</pre></div>
+
+
+<h2 id="start-the-copper-server-deployment">Start the copper-server deployment<a class="headerlink" href="#start-the-copper-server-deployment" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>$ cd Copper/copper-server/kubernetes/deployment/
+$ sh deploy.sh
+</pre></div>
+
+
+<h2 id="you-may-have-to-provide-following-informaiton-while-the-installation-process-is-going-on">You may have to provide following informaiton while the installation process is going on.<a class="headerlink" href="#you-may-have-to-provide-following-informaiton-while-the-installation-process-is-going-on" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>Enter mysql database name:
+
+Ex : copper
+
+Enter mysql database password:
+
+Ex : copper
+
+Your domain must contain 3 parts. (Eg: part1.part2.part3)
+Enter the first part of domain:
+
+Ex : copper
+
+Enter the second part of domain:
+
+Ex : test
+
+Enter the third part of domain:
+
+Ex : lk
+
+Enter LDAP admin password:
+
+Ex : admin
+
+Enter LDAP readonly user name:
+
+Ex : raa
+
+Enter LDAP readonly user password:
+
+Ex : raa
+
+Enter organization name
+
+Ex : lsf
+
+Enter password for spam filter (RspamD)
+
+Ex : spam
+</pre></div>
+
+
+<p>Ex : Image of running deply.sh</p>
+<p><img alt="Check copper pods" src="../images/installation/install.png" /></p>
+<h2 id="check-kubernetes-pods">Check kubernetes pods.<a class="headerlink" href="#check-kubernetes-pods" title="Permanent link">&para;</a></h2>
+<p align="justify">
+
+Then system installation process will begin. It will not take much time to install the system. But it is must to check kubernetes pods whether to know system is installed successfully. All pods status must be "Running".
+</p>
+
+<div class="codehilite"><pre><span></span>$kubectl get pods -n copper
+</pre></div>
+
+
+<p><img alt="Check copper pods" src="../images/installation/pods2.png" /></p>
+<h2 id="check-kubernetes-secrets">Check kubernetes secrets<a class="headerlink" href="#check-kubernetes-secrets" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span>kubectl get secrets -n copper
+</pre></div>
+
+
+<p>Following sercrets should have been created.</p>
+<p><img alt="Check copper secrets" src="../images/installation/secrets.png" /></p>
+<div class="codehilite"><pre><span></span>email-secret          Opaque                                57     1h
+tls-certificate       kubernetes.io/tls                     2      1h
+tls-dhparam           Opaque                                1      1h
+</pre></div>
+
+
+<h2 id="check-kubernetes-services">Check kubernetes services.<a class="headerlink" href="#check-kubernetes-services" title="Permanent link">&para;</a></h2>
+<p align="justify">
+
+Further kubernetes services also should be checked. All LoadBalancers External IP should be "localhost" and all nodeport's External IP should be  "<none>". PORTs can be seen from bellow command and 
+</p>
+
+<div class="codehilite"><pre><span></span>$kubectl get services -n copper
+</pre></div>
+
+
+<p><img alt="Check copper services" src="../images/installation/services2.png" /></p>
+<p>## Check kubernetes services.</p>
+<p align="justify">
+Some time it is required to uninstall the system. For that there is a shell script uninstall.sh 
+</p>
+
+<div class="codehilite"><pre><span></span>$ sh undeploy.sh
+</pre></div>
+
+
+<p>Ex : Image of running undeploy.sh</p>
+<p><img alt="Uninstallation" src="../images/installation/uninstall.png" /></p>
                 
                   
                 
@@ -638,7 +775,7 @@ Transport encryption means that the email(s) will be encrypted when they are sen
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../HubInstallation/" title="Copper Hub Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Installation/" title="Installation version 6" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -647,19 +784,19 @@ Transport encryption means that the email(s) will be encrypted when they are sen
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Copper Hub Installation
+                Installation version 6
               </span>
             </div>
           </a>
         
         
-          <a href="../lsf/" title="LSF" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Configuration/" title="Initial Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                LSF
+                Initial Configuration
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
