@@ -563,15 +563,15 @@
 This repository contains source code for copper-hub which is the alerting, monitoring and update handling system for Copper.</p>
 <p>First, create grafana docker image using ./grafana-image/Dockerfile. (Read the ./grafana-image/README.md before building image)
 </p></p>
-<div class="codehilite"><pre><span></span>docker build -t graf .
+<div class="codehilite"><pre><span></span>docker build -t graf ./proemtheus_grafana/grafana-image/Dockerfile
 </pre></div>
 
 
 <h3 id="quick-start">Quick start<a class="headerlink" href="#quick-start" title="Permanent link">&para;</a></h3>
 <p>To quickly start all the things just do this:</p>
-<div class="codehilite"><pre><span></span>kubectl apply --filename ./prometheus-master/manifests-all.yaml
+<div class="codehilite"><pre><span></span>kubectl apply --filename ./proemtheus_grafana/prometheus-master/manifests-all.yaml
 
-kubectl apply --filename ./prometheus-master/grafana.yaml
+kubectl apply --filename ./proemtheus_grafana/prometheus-master/grafana.yaml
 </pre></div>
 
 
