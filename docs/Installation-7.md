@@ -15,12 +15,22 @@ secrets, ingress and deployments and services etc. So all interfaces can be acce
 ```
 $ git clone https://github.com/LSFLK/Copper.git
 ```
-## create the following folder in your server
+## create the volume for the emailserver
+
+It is must to create a hostpath volume as mentioned in the k8s yml files at the end of each file in "hostpath" tag.
 
 ```
-/data/ldap/certs
+      volumes:
+            - name: ldap-certs
+              hostPath:
+                path: "/Users/wso2/Documents/copper/copper/copper-server/kubernetes/tls"
+                
 
 ```
+
+So "/Users/wso2/Documents/copper/copper/copper-server/kubernetes/tls" shoul have created 
+in the server or it is must to change according to your preffered path in k8s yml files.
+
 
 ## Generate certificate files.
 <p align="justify">
