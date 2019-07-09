@@ -2,8 +2,8 @@
 
 ## Installation
 <p align="justify">
-This file describe the installation process in detailed for email version 7 and higher. Basically this deployment architecture is consists with kubernetes container orchestration facilites as shown in bellow figure. It consists with some kubernetes services like
-secrets, ingress and deployments and services etc. So all interfaces can be accessed through a loadbalancer which works as a reverse proxy and all interfaces are https enabled with ingress deployment.
+This file describe the installation process in detailed for email version 0.7 and higher. Basically this deployment architecture is consists with kubernetes container orchestration facilites as shown in bellow figure. It consists with some kubernetes services like
+secrets, ingress and deployments and services etc. So all interfaces can be accessed through a loadbalancer which works as a reverse proxy and all interfaces are https enabled with ingress deployment. But This version need some more configurations. If you want a quick look just go for version 0.6 which has least amount of configurations.
 
 </p>
 
