@@ -746,6 +746,38 @@ Further kubernetes services also should be checked. All LoadBalancers External I
 <p><img alt="Check copper services" src="../images/installation/services2.png" /></p>
 <p>## Check kubernetes services.</p>
 <p align="justify">
+If services are ok, check using browser whether you can access these interfaces. "copper.opensource.lk" is the domain name you configured in the host file.
+</p>
+
+<p>Groupoffice</p>
+<div class="codehilite"><pre><span></span>https://copper.opensource.lk/
+</pre></div>
+
+
+<p>phpldapadmin</p>
+<div class="codehilite"><pre><span></span>https://copper.opensource.lk/phpldapadmin/
+</pre></div>
+
+
+<p>user password change</p>
+<div class="codehilite"><pre><span></span>https://copper.opensource.lk/service/
+</pre></div>
+
+
+<p>If you find any issue accessing above urls then just try recreating ingress loadbalancer.</p>
+<div class="codehilite"><pre><span></span># Delete existing ingress
+
+kubectl delete service nginx-ingress -n copper
+
+kubectl delete deployment nginx-ingress-controller -n copper
+
+# Exicute following command from kubernetes folder to recreate ingress 
+
+kubectl create -f Ingress/nginx-controller.yaml
+</pre></div>
+
+
+<p align="justify">
 Some time it is required to uninstall the system. For that there is a shell script uninstall.sh 
 </p>
 
