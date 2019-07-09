@@ -344,8 +344,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-the-following-folder-in-your-server" title="create the following folder in your server" class="md-nav__link">
-    create the following folder in your server
+  <a href="#create-the-volume-for-the-emailserver" title="create the volume for the emailserver" class="md-nav__link">
+    create the volume for the emailserver
   </a>
   
 </li>
@@ -541,8 +541,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-the-following-folder-in-your-server" title="create the following folder in your server" class="md-nav__link">
-    create the following folder in your server
+  <a href="#create-the-volume-for-the-emailserver" title="create the volume for the emailserver" class="md-nav__link">
+    create the volume for the emailserver
   </a>
   
 </li>
@@ -628,11 +628,17 @@ secrets, ingress and deployments and services etc. So all interfaces can be acce
 </pre></div>
 
 
-<h2 id="create-the-following-folder-in-your-server">create the following folder in your server<a class="headerlink" href="#create-the-following-folder-in-your-server" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span>/data/ldap/certs
+<h2 id="create-the-volume-for-the-emailserver">create the volume for the emailserver<a class="headerlink" href="#create-the-volume-for-the-emailserver" title="Permanent link">&para;</a></h2>
+<p>It is must to create a hostpath volume as mentioned in the k8s yml files at the end of each file in "hostpath" tag.</p>
+<div class="codehilite"><pre><span></span>      volumes:
+            - name: ldap-certs
+              hostPath:
+                path: &quot;/Users/wso2/Documents/copper/copper/copper-server/kubernetes/tls&quot;
 </pre></div>
 
 
+<p>So "/Users/wso2/Documents/copper/copper/copper-server/kubernetes/tls" shoul have created 
+in the server or it is must to change according to your preffered path in k8s yml files.</p>
 <h2 id="generate-certificate-files">Generate certificate files.<a class="headerlink" href="#generate-certificate-files" title="Permanent link">&para;</a></h2>
 <p><p align="justify">
 This shell file will create necessary self signed certifcate for the system and then those certificates are used to create kubernetes tls secrets. 
