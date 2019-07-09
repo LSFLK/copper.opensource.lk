@@ -14,7 +14,8 @@ nav:
     - Features: userfeature.md
     - Technical Documentation: Structure.md
     - Prerequisites: Prerequisites.md
-    - Installation: Installation.md
+    - Installation version 6: Installation.md
+    - Installation version 7: Installation-7.md
     - Initial Configuration: Configuration.md
     #- Client Configuration: CConfiguration.md
     - Backup & Restoration: Backups.md

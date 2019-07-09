@@ -2,8 +2,7 @@
 
 ## Installation
 
-README.md file in the Deployment folder describe the installation process in detailed. It is the most updated one and please reffer it for more details. 
-
+README.md file in the Deployment folder describe the installation process in detailed. Copper email server version 0.6 or less than deployments are covered in this document.
 ## Clone this Repository
 
 ```
