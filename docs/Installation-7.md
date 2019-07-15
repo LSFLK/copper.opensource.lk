@@ -15,9 +15,9 @@ secrets, ingress and deployments and services etc. So all interfaces can be acce
 ```
 $ git clone https://github.com/LSFLK/Copper.git
 ```
-## create the volume for the emailserver
+## Create the volume for the emailserver 
 
-It is must to create a hostpath volume as mentioned in the k8s yml files at the end of each file in "hostpath" tag.
+It is required to create a hostpath volume as mentioned in the k8s yml files at the end of each file in "hostPath" tag.
 
 ```
       volumes:
