@@ -376,6 +376,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#backup-files-in-your-local-directory-with-rsync" title="Backup Files in your local directory With Rsync" class="md-nav__link">
     Backup Files in your local directory With Rsync
@@ -383,14 +388,16 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#now-time-to-automate-the-backup" title="Now time to automate the backup" class="md-nav__link">
+    Now time to automate the backup
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#now-time-to-automate-the-backup" title="Now time to automate the backup" class="md-nav__link">
-    Now time to automate the backup
+  <a href="#check-mail-backup-process-is-working-properly" title="Check mail backup process is working properly." class="md-nav__link">
+    Check mail backup process is working properly.
   </a>
   
 </li>
@@ -449,8 +456,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Hub/" title="Central Supervision" class="md-nav__link">
-      Central Supervision
+    <a href="../Hub/" title="Centralized Supervision" class="md-nav__link">
+      Centralized Supervision
     </a>
   </li>
 
@@ -582,6 +589,11 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
   <a href="#backup-files-in-your-local-directory-with-rsync" title="Backup Files in your local directory With Rsync" class="md-nav__link">
     Backup Files in your local directory With Rsync
@@ -589,14 +601,16 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#now-time-to-automate-the-backup" title="Now time to automate the backup" class="md-nav__link">
+    Now time to automate the backup
+  </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#now-time-to-automate-the-backup" title="Now time to automate the backup" class="md-nav__link">
-    Now time to automate the backup
+  <a href="#check-mail-backup-process-is-working-properly" title="Check mail backup process is working properly." class="md-nav__link">
+    Check mail backup process is working properly.
   </a>
   
 </li>
@@ -728,9 +742,9 @@ storageos
 </pre></div>
 
 
+<h3 id="backup-files-in-your-local-directory-with-rsync">Backup Files in your local directory With Rsync<a class="headerlink" href="#backup-files-in-your-local-directory-with-rsync" title="Permanent link">&para;</a></h3>
 <p>One risk of keeping all your data on local machines is that in case of a natural disaster, fire or flood, your local system will be damaged and you will lose your data. It's recommended to keep another copy of your data on a machine located elsewhere.
 Then we can sync mail directories using rsync command over network.</p>
-<h4 id="backup-files-in-your-local-directory-with-rsync">Backup Files in your local directory With Rsync<a class="headerlink" href="#backup-files-in-your-local-directory-with-rsync" title="Permanent link">&para;</a></h4>
 <p>This is where ssh protocol comes into play. I use the following syntax to sync a remote directory with a local directory:</p>
 <div class="codehilite"><pre><span></span>rsync -avzP --delete -e ssh user@server_IP:source-directory /destination_directory_on_local_machine/
 </pre></div>
@@ -755,7 +769,8 @@ Then we can sync mail directories using rsync command over network.</p>
 
 
 <h3 id="now-time-to-automate-the-backup">Now time to automate the backup<a class="headerlink" href="#now-time-to-automate-the-backup" title="Permanent link">&para;</a></h3>
-<p>Now run 'crontab -e' to create cron jobs. It will open an empty file where you can configure the command that you want to run at a desired time. (See image, above.)</p>
+<p>Crontab is the simplest way to automate data backup process. 
+Now run 'crontab -e' to create cron jobs. It will open an empty file where you can configure the command that you want to run at a desired time. (See image, above.)</p>
 <p>The format of crontab is simple; it has five fields followed by the command:</p>
 <div class="codehilite"><pre><span></span>m h dm m dw command
 </pre></div>
@@ -767,6 +782,31 @@ Then we can sync mail directories using rsync command over network.</p>
 </pre></div>
 
 
+<h3 id="check-mail-backup-process-is-working-properly">Check mail backup process is working properly.<a class="headerlink" href="#check-mail-backup-process-is-working-properly" title="Permanent link">&para;</a></h3>
+<p>First we have to ensure that eventhough any pod recreation or deletion does not effect to the existing mails. No only that we have to check and confirme it works propely. </p>
+<ul>
+<li>Check the email directory</li>
+</ul>
+<p>Check whether your local directory has emails in mail dir.</p>
+<p><img alt="Current Mail Dir" src="../images/backup/test1.png" /></p>
+<ul>
+<li>Delete the email server pod  and recreate it</li>
+</ul>
+<p><img alt="Recreate Email server" src="../images/backup/test2.png" /></p>
+<ul>
+<li>Check the mail dir both in localhost and from inside container.</li>
+</ul>
+<p>You should be able to see old mails are still in the maildir .</p>
+<p><img alt="Check mail dir again" src="../images/backup/test3.png" /></p>
+<ul>
+<li>Now access the mail from web client.</li>
+</ul>
+<p>When you access from the web client your previous mails should be there.
+Some time it may take about 2 minits to update. But then you can send mail and test whether email server is working properly and you have previous mails also.</p>
+<p><img alt="Old and new mails available in the web client" src="../images/backup/test4.png" /></p>
+<p>Then again you can check your mail dir and check whether new mails are updated.</p>
+<p><img alt="maildir after new mails sending" src="../images/backup/newmail.png" /></p>
+<p>Then it is confirmed that eventhough pods are recreated previous mails can be accessed and this method can be used for other backup requirements also.</p>
 <h2 id="volume-configuration-in-gke">Volume configuration in GKE<a class="headerlink" href="#volume-configuration-in-gke" title="Permanent link">&para;</a></h2>
 <h3 id="gcepersistentdisk">gcePersistentDisk<a class="headerlink" href="#gcepersistentdisk" title="Permanent link">&para;</a></h3>
 <p align="justify">
