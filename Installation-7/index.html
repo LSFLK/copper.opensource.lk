@@ -452,8 +452,32 @@
 
 
   <li class="md-nav__item">
+    <a href="../Hub/" title="Central Supervision" class="md-nav__link">
+      Central Supervision
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="../HubInstallation/" title="Copper Hub Installation" class="md-nav__link">
       Copper Hub Installation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../Hubfeatures/" title="Copper Hub Features" class="md-nav__link">
+      Copper Hub Features
     </a>
   </li>
 
@@ -795,6 +819,30 @@ kubectl create -f Ingress/nginx-controller.yaml
 </pre></div>
 
 
+<p>Once system is up and running you should check whether clam av virus guard is updated automatically.</p>
+<p>Further log file will be created in the "/var/log/copperclamav.log" . Check it and verify that main.cvd file is up to date.</p>
+<div class="codehilite"><pre><span></span>nano /var/log/copperclamav.log
+</pre></div>
+
+
+<p>If you find that logs are not created then simply execute following command to check and restart the cronjob.</p>
+<p>If you want to check the crontab use bellow command.</p>
+<div class="codehilite"><pre><span></span>crontab -e
+</pre></div>
+
+
+<p>Crontab content should be</p>
+<div class="codehilite"><pre><span></span>*/50 * * * * sh /bin/init_clamav.sh
+</pre></div>
+
+
+<p>Restart the cron jobs.</p>
+<div class="codehilite"><pre><span></span>service cron start
+</pre></div>
+
+
+<p>This clamav automated update handling is described in following url.</p>
+<p>https://github.com/LSFLK/Copper/wiki/Virus-databae-upate</p>
 <p align="justify">
 Some time it is required to uninstall the system. For that there is a shell script uninstall.sh 
 </p>
