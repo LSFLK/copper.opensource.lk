@@ -193,6 +193,34 @@ kubectl create -f Ingress/nginx-controller.yaml
 
 ```
 
+Once system is up and running you should check whether clam av virus guard is updated automatically.
+
+Further log file will be created in the "/var/log/copperclamav.log" . Check it and verify that main.cvd file is up to date.
+
+    nano /var/log/copperclamav.log 
+
+If you find that logs are not created then simply execute following command to check and restart the cronjob.
+
+If you want to check the crontab use bellow command.
+
+    crontab -e
+
+Crontab content should be
+
+    */50 * * * * sh /bin/init_clamav.sh
+
+Restart the cron jobs.
+
+    service cron start
+
+
+This clamav automated update handling is described in following url.
+
+
+https://github.com/LSFLK/Copper/wiki/Virus-databae-upate
+
+
+
 
 <p align="justify">
 Some time it is required to uninstall the system. For that there is a shell script uninstall.sh 

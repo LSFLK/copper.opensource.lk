@@ -75,19 +75,19 @@ This is a path in your localhost
 Check local directory configured in your volumes.
 
 
-![Volumes](images/backup/pwd.png)
+![Path](images/backup/pwd.png)
 
 
 Check the Encripted mails inside mail directory.
 
 
-![Volumes](images/backup/maildir.png)
+![Mail directory](images/backup/maildir.png)
 
 
 Check the content of the mail whether it is encripted.
 
 
-![Volumes](images/backup/mail.png)
+![Encrypted mail](images/backup/mail.png)
 
 
 So we can see that mail is encripted and it is possible to backup these mails somewhere else repository.
