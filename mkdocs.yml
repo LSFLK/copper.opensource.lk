@@ -22,7 +22,7 @@ nav:
     - Troubleshoot: troubleshoot.md
     - Central Supervision: Hub.md
     - Copper Hub Installation: HubInstallation.md
-    #
+    - Copper Hub Features: Hubfeatures.md
     - Email security: issues.md
     - Next Features : future.md
     - LSF: lsf.md
