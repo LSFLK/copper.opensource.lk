@@ -20,7 +20,7 @@ nav:
     #- Client Configuration: CConfiguration.md
     - Backup & Restoration: Backups.md
     - Troubleshoot: troubleshoot.md
-    - Central Supervision: Hub.md
+    - Centralized Supervision: Hub.md
     - Copper Hub Installation: HubInstallation.md
     - Copper Hub Features: Hubfeatures.md
     - Email security: issues.md
