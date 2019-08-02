@@ -113,10 +113,12 @@ For this perpose we can use many kubernetes cloud storage solutions like.
     secret
     storageos
 
+
+
+### Backup Files in your local directory With Rsync
+
 One risk of keeping all your data on local machines is that in case of a natural disaster, fire or flood, your local system will be damaged and you will lose your data. It's recommended to keep another copy of your data on a machine located elsewhere.
 Then we can sync mail directories using rsync command over network.
-
-#### Backup Files in your local directory With Rsync
 
 This is where ssh protocol comes into play. I use the following syntax to sync a remote directory with a local directory:
 
@@ -142,6 +144,7 @@ rsync -avzP --delete -e ssh /home/swapnil/Downloads/
 ```
 
 ### Now time to automate the backup
+Crontab is the simplest way to automate data backup process. 
 Now run 'crontab -e' to create cron jobs. It will open an empty file where you can configure the command that you want to run at a desired time. (See image, above.)
 
 The format of crontab is simple; it has five fields followed by the command:
@@ -155,6 +158,46 @@ I run the command every day at 11.30 so the format will be
     30 23 * * * rsync -av --delete /media/hdd1/data-1/ /media/hdd2/data-2/
 
 
+
+### Check mail backup process is working properly.
+
+First we have to ensure that eventhough any pod recreation or deletion does not effect to the existing mails. No only that we have to check and confirme it works propely. 
+
+*    Check the email directory
+
+Check whether your local directory has emails in mail dir.
+
+
+![Current Mail Dir](images/backup/test1.png)
+
+
+*   Delete the email server pod  and recreate it
+
+![Recreate Email server](images/backup/test2.png)
+
+
+*    Check the mail dir both in localhost and from inside container.
+
+You should be able to see old mails are still in the maildir .
+
+![Check mail dir again](images/backup/test3.png)
+
+
+*    Now access the mail from web client.
+
+
+When you access from the web client your previous mails should be there.
+Some time it may take about 2 minits to update. But then you can send mail and test whether email server is working properly and you have previous mails also.
+
+![Old and new mails available in the web client](images/backup/test4.png)
+
+
+Then again you can check your mail dir and check whether new mails are updated.
+
+![maildir after new mails sending](images/backup/newmail.png)
+
+
+Then it is confirmed that eventhough pods are recreated previous mails can be accessed and this method can be used for other backup requirements also.
 
 
 ## Volume configuration in GKE
